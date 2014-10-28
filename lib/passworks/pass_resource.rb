@@ -8,7 +8,6 @@ module Passworks
     end
 
     def push
-      binding.pry
       client.post("#{collection_name}/#{collection_uuid}/passes/#{id}/push").ok?
     end
 

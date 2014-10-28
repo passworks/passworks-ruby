@@ -18,7 +18,7 @@ module Passworks
       self.options == options
     end
 
-    %w(assets bording_passes store_cards coupons generics).each do |collection_name|
+    %w(assets boarding_passes store_cards coupons generics).each do |collection_name|
       define_method(collection_name) do
         Passworks::RequestProxy.new(self, collection_name, nil)
       end

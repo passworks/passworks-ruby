@@ -1,6 +1,3 @@
-require 'pry-debugger'
-require 'pry'
-
 require 'passworks/version'
 require 'passworks/configuration'
 require 'passworks/client'

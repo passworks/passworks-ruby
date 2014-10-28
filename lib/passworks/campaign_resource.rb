@@ -8,9 +8,11 @@ module Passworks
     end
 
     def delete
+      client.delete("#{collection_name}/#{id}").ok?
     end
 
     def push
+      client.post("#{collection_name}/#{id}/push").ok?
     end
 
   end

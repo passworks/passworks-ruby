@@ -32,6 +32,8 @@ Passworks.configure do |config|
   config.api_username = "your api username"
   config.api_secret   = "your api secret"
 end
+
+client = Passworks.new
 ```
 
 ```ruby
@@ -47,9 +49,8 @@ client = Passworks.new({
 ### Assets
 
 ```ruby
-
 # upload an asset (icon image)
-asset_icon = client.assets.create({ file: '/path-to-file/icon-file.png', :asset_type: 'icon' })
+asset_icon = client.assets.create({ file: '/path-to-file/icon-file.png', asset_type: 'icon' })
 
 # fetch and iterate through all your assets
 assets = client.assets.all
@@ -65,8 +66,37 @@ client.assets.delete('c3d5fc64-3a43-4d3a-a167-473dfeb1edd3')
 
 # delete the asset instance (loading first the asset)
 asset.delete
+```
 
+### Coupons
 
+```ruby
+# create a coupon campaign
+coupon_campaign = client.coupons.create({
+  name: "my first coupon campaign",
+  icon_id: "c3d5fc64-3a43-4d3a-a167-473dfeb1edd3"
+})
+
+# add a pass the the coupon campaign
+coupon_pass = coupon_campaign.passes.create({
+  primary_fields: [
+    {
+      label: "label1",
+      value: "value1"
+    }
+  ]
+})
+
+# fetch and print all passes from the `coupon_campaign` campaign
+coupon_campaign.passes.all.each do |coupon_pass|
+  puts coupon_pass
+end
+
+# send push notification all users of a coupon campaign
+coupon_campaign.push
+
+# send push notification to the users of a given passe of the `coupon_campaign`
+coupon_campaign.passes.all.first.push
 ```
 
 ## Documentation

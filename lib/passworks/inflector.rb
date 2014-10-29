@@ -1,6 +1,8 @@
 module Passworks
   module Inflector
 
+    # Return the singular version of the *curren_collection* name
+    # @return [String] singular version of the current collection name
     def single_name
       case collection_name
       when 'assets'

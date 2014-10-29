@@ -7,6 +7,7 @@ module Passworks
 
     VALID_OPTION_KEYS     = [:api_username, :api_secret, :debug].freeze
 
+    # @!visibility private
     VALID_CONFIG_KEYS     = VALID_CONNECTION_KEYS + VALID_OPTION_KEYS
 
     DEFAULT_ENDPOINT      = 'https://api.passworks.io'
@@ -32,6 +33,7 @@ module Passworks
       end
     end
 
+    # @!visibility private
     def self.default_options
       @default_options ||= {
         endpoint:     ENV['PASSWORKS_ENDPOINT']     || DEFAULT_ENDPOINT   ,
@@ -41,7 +43,7 @@ module Passworks
         debug:        false
       }
     end
-
+    # @return the endpoint address with API version appended
     def endpoint
       File.join(@endpoint, 'v1').to_s
     end

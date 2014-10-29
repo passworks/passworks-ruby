@@ -8,7 +8,6 @@ require 'passworks/response'
 module Passworks
   module Request
 
-
     def request(method, path, options={})
       response = agent.send(method) do |request|
         case method

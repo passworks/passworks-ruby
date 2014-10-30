@@ -1,8 +1,3 @@
-require 'passworks/configuration'
-require 'passworks/request'
-require 'passworks/request_proxy'
-
-
 module Passworks
 
   # Client is the HTTP API Wrapper to comunicate with the Passworks API

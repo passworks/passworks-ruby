@@ -22,5 +22,17 @@ module Passworks
       end
     end
 
+    # Return resource class based in collection_name and collection_uuid
+    # If collection_name  return [Passworks::AssetResource]
+    # If  collection_uuid == nil return [Passworks::CampaignResource] else return [Passworks::PassResource]
+    def resource_class
+      return Passworks::AssetResource if collection_name == 'assets'
+      if collection_uuid
+        Passworks::PassResource
+      else
+        Passworks::CampaignResource
+      end
+    end
+
   end
 end

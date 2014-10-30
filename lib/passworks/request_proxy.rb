@@ -1,13 +1,7 @@
-require 'passworks/collection_proxy'
-require 'passworks/inflector'
-require 'passworks/exceptions/file_not_found'
-
 module Passworks
   class RequestProxy
 
     include Passworks::Inflector
-
-
 
     # @return [Passworks::Client] fsdfsd fsf sdfsd fsdf
     attr_reader :client
@@ -46,15 +40,15 @@ module Passworks
     #   coupon_campaign = client.coupons.find('c3d5fc64-3a43-4d3a-a167-473dfeb1edd3')
     # @example Fetching a pass for the first coupon campaign
     #   pass = client.coupons.all(per_page: 1).first.passes.find('c3d5fc64-3a43-4d3a-a167-473dfeb1edd3')
-    # @return [Passworks::CollectionProxy]
+    # @return [PassResource.new or CampaignResource]
     def find(uuid)
       if collection_uuid
-        response = client.get("#{collection_name}/#{collection_uuid}/passes/#{uuid}")
-        PassResource.new(client, collection_name, response.data)
+        fetch_url = "#{collection_name}/#{collection_uuid}/passes/#{uuid}"
       else
-        response = client.get("#{collection_name}/#{uuid}")
-        CampaignResource.new(client, collection_name, response.data)
+        fetch_url = "#{collection_name}/#{uuid}"
       end
+      response = client.get(fetch_url)
+      resource_class.new(client, collection_name, response.data)
     end
 
     # Creates a campaing instance (Assests, Boarding Passes, Coupons, Generics and Store Cards) or a passe depending of the caller context
@@ -82,17 +76,18 @@ module Passworks
             'pass' => campaing_or_pass_data
           }.merge(extra_args)
         }
-        response = client.post("#{collection_url}/passes", content)
-        PassResource.new(client, collection_name, response.data)
+        fetch_url = "#{collection_url}/passes"
       else
         content = {
           body: {
             single_name.to_sym => campaing_or_pass_data
           }.merge(extra_args)
         }
-        response = client.post(collection_url, content)
-        CampaignResource.new(client, collection_name, response.data)
+        fetch_url = collection_url
       end
+
+      response = client.post(fetch_url, content)
+      resource_class.new(client, collection_name, response.data)
 
     end
 

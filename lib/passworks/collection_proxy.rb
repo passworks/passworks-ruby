@@ -1,10 +1,10 @@
-require 'passworks/campaign_resource'
-require 'passworks/pass_resource'
+require 'passworks/inflector'
 
 module Passworks
   class CollectionProxy
 
     include Enumerable
+    include Passworks::Inflector
 
     attr_reader :collection_name, :collection_uuid, :client, :options
 
@@ -24,7 +24,7 @@ module Passworks
           response = client.get(collection_url, options)
         end
         response.data.each do |item_data|
-          yield resource_type.new(client, collection_name, item_data)
+          yield resource_class.new(client, collection_name, item_data)
         end
         next_page = response.next_page
         break if next_page.nil?
@@ -39,14 +39,6 @@ module Passworks
           "#{collection_name}/#{collection_uuid}/passes"
         else
           collection_name
-        end
-      end
-
-      def resource_type
-        if collection_uuid
-          Passworks::PassResource
-        else
-          Passworks::CampaignResource
         end
       end
 

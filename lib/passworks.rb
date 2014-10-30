@@ -1,6 +1,16 @@
 require 'passworks/version'
 require 'passworks/configuration'
+require 'passworks/exception'
+require 'passworks/response'
+require 'passworks/inflector'
+require 'passworks/request'
+require 'passworks/request_proxy'
 require 'passworks/client'
+require 'passworks/collection_proxy'
+require 'passworks/resource'
+require 'passworks/campaign_resource'
+require 'passworks/asset_resource'
+require 'passworks/pass_resource'
 
 # Passworks
 

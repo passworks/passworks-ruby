@@ -49,19 +49,19 @@ client = Passworks.new({
 ### Assets
 
 ```ruby
-# upload an asset (icon image)
+# Upload an asset (icon image)
 asset_icon = client.assets.create({ file: '/path-to-file/icon-file.png', asset_type: 'icon' })
 
-# fetch and iterate through all your assets
+# Fetch and iterate through all your assets
 assets = client.assets.all
 assets.each do |asset|
   puts asset
 end
 
-# fetch a specific assets via uuid (uuid=c3d5fc64-3a43-4d3a-a167-473dfeb1edd3)
+# Fetch a specific assets via uuid (uuid=c3d5fc64-3a43-4d3a-a167-473dfeb1edd3)
 asset = client.assets.find('c3d5fc64-3a43-4d3a-a167-473dfeb1edd3')
 
-# delete asset without loading it first
+# Delete asset without loading it first
 client.assets.delete('c3d5fc64-3a43-4d3a-a167-473dfeb1edd3')
 
 # delete the asset instance (loading first the asset)
@@ -71,13 +71,14 @@ asset.delete
 ### Coupons
 
 ```ruby
-# create a coupon campaign
+# Create a coupon campaign
 coupon_campaign = client.coupons.create({
   name: "my first coupon campaign",
   icon_id: "c3d5fc64-3a43-4d3a-a167-473dfeb1edd3"
 })
 
-# add a pass the the coupon campaign
+# Add a pass the the coupon campaign
+# see [Coupon API documentation](https://github.com/passworks/passworks-api/blob/master/sections/coupon.md) for details about the valid coupon fields
 coupon_pass = coupon_campaign.passes.create({
   primary_fields: [
     {

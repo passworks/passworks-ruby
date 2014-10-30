@@ -78,17 +78,19 @@ coupon_campaign = client.coupons.create({
 })
 
 # Add a pass the the coupon campaign
-# see [Coupon API documentation](https://github.com/passworks/passworks-api/blob/master/sections/coupon.md) for details about the valid coupon fields
+# see [Coupon API documentation for details about the valid coupon fields
+# https://github.com/passworks/passworks-api/blob/master/sections/coupon.md
 coupon_pass = coupon_campaign.passes.create({
   primary_fields: [
     {
+      key: "key1"
       label: "label1",
       value: "value1"
     }
   ]
 })
 
-# fetch and print all passes from the `coupon_campaign` campaign
+# Fetch and print all passes from the `coupon_campaign` campaign
 coupon_campaign.passes.all.each do |coupon_pass|
   puts coupon_pass
 end
@@ -96,8 +98,22 @@ end
 # send push notification all users of a coupon campaign
 coupon_campaign.push
 
-# send push notification to the users of a given passe of the `coupon_campaign`
+# Send push notification to the users of a given passe of the `coupon_campaign`
 coupon_campaign.passes.all.first.push
+
+# Update coupon pass
+# the #update method returns the updated PassResource instance
+coupon_pass         = coupon_campaign.passes.all.first
+updated_coupon_pass = coupon_pass.update({
+  primary_fields: [
+    {
+      key: "key2"
+      label: "label2",
+      value: "value2"
+    }
+  ]
+})
+
 ```
 
 ## Documentation

@@ -28,6 +28,8 @@ module Passworks
             raise Passworks::Exceptions::UnprocessableEntity, error_400(response)
           when 500
             raise Passworks::Exceptions::InternalServerError, error_500(response, 'Internal Server Error' , 'The server encountered an unexpected condition which prevented it from fulfilling the request.')
+          when 501
+            raise Passworks::Exceptions::NotImplemented, error_500(response, 'Not Implemented' , 'Current method not implemented.')
           when 502
             raise Passworks::Exceptions::BadGateway, error_500(response, 'Bad Gateway', 'The server, while acting as a gateway or proxy, received an invalid response from the upstream server it accessed in attempting to fulfill the request.')
           when 503

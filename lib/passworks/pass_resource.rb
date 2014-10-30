@@ -18,6 +18,18 @@ module Passworks
       client.post("#{collection_name}/#{collection_uuid}/passes/#{id}/push").ok?
     end
 
+    # Updates the {PassResource} and returns the updated instance
+    # @return [PassResource] Updated instance
+    def update(data, params={})
+      content = {
+        body: {
+          pass: data
+        }.merge(params)
+      }
+      response  = client.patch("#{collection_name}/#{collection_uuid}/passes/#{id}", content)
+      self.class.new(client, collection_name, response.data)
+    end
+
     private
       def collection_uuid
         @collection_uuid ||= send("#{single_name}_id")

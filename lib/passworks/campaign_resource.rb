@@ -23,5 +23,18 @@ module Passworks
       client.post("#{collection_name}/#{id}/push").ok?
     end
 
+    # Updates the {CampaignResource} and returns the updated instance
+    # @return [CampaignResource] Updated instance
+    def update(data, params={})
+      content = {
+        body: {
+          single_name.to_sym => data
+        }.merge(params)
+      }
+      response  = client.patch("#{collection_name}/#{id}", content)
+      self.class.new(client, collection_name, response.data)
+    end
+
+
   end
 end

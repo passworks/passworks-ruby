@@ -1,10 +1,3 @@
-require 'uri'
-require 'faraday'
-require 'faraday_middleware'
-require 'passworks/faraday/http_exception_middleware'
-require 'passworks/response'
-
-
 module Passworks
   module Request
 

@@ -169,8 +169,7 @@ updated_coupon_pass = store_card_pass.update({
 # Create a event ticket campaign
 event_ticket_campaign = client.event_tickets.create({
   name: "my first event ticket campaign",
-  icon_id: "c3d5fc64-3a43-4d3a-a167-473dfeb1edd3",
-  ty
+  icon_id: "c3d5fc64-3a43-4d3a-a167-473dfeb1edd3"
 })
 
 # Add a pass the the event ticket campaign

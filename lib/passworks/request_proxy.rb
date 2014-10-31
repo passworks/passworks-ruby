@@ -52,9 +52,9 @@ module Passworks
     end
 
     # Creates a campaing instance (Assests, Boarding Passes, Coupons, Generics and Store Cards) or a passe depending of the caller context
-    # @param campaing_or_pass_data [Hash] campaing_or_pass_data Campaign or pass data
-    # @param extra_args [Hash] extra_args Extra arguments to send with the request
-    # @option extra_args [Boolean] merge: (true) Merge passed pass data with the campaign incase you are creating a passe instance.
+    # @param data [Hash] data Campaign or pass data
+    # @param params [Hash] params Extra arguments to send with the request
+    # @option params [Boolean] merge: (true) Merge passed pass data with the campaign incase you are creating a passe instance.
     # @example Create a coupon (campaign)
     #   client.coupons.create({
     #     name: 'My First Coupon',
@@ -63,25 +63,25 @@ module Passworks
     # @example Create a "empty" passe for the first coupon campaign
     #   client.coupons.all(per_page: 1).first.passes.create()
     # @return [Passworks::CampaignResource or Passworks::PassResource] depending of the calling a {Passworks::CampaignResource} or {Passworks::PassResource} is returned.
-    def create(campaing_or_pass_data={}, extra_args={})
+    def create(data={}, params={})
 
       if collection_name.to_s == 'assets' && collection_uuid.nil?
-        raise Passworks::Exceptions::FileNotFound.new("Can't find file #{hash[:file]}") unless hash.has_key?(:file) && File.exists?(hash[:file])
-        hash[:file] = ::Faraday::UploadIO.new(hash[:file], "image/#{hash[:file].split('.').last.downcase}")
+        raise Passworks::Exceptions::FileNotFound.new("Can't find file #{data[:file]}") unless data.has_key?(:file) && File.exists?(data[:file])
+        data[:file] = ::Faraday::UploadIO.new(data[:file], "image/#{data[:file].split('.').last.downcase}")
       end
 
       if collection_uuid
         content = {
           body: {
-            'pass' => campaing_or_pass_data
-          }.merge(extra_args)
+            'pass' => data
+          }.merge(params)
         }
         fetch_url = "#{collection_url}/passes"
       else
         content = {
           body: {
-            single_name.to_sym => campaing_or_pass_data
-          }.merge(extra_args)
+            single_name.to_sym => data
+          }.merge(params)
         }
         fetch_url = collection_url
       end

@@ -1,0 +1,353 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://PASSWORKS_API_USERNAME:PASSWORKS_API_SECRET@api.passworks.git:3000/v1/assets?per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Passworks Ruby API Client/0.0.2 Ruby/2.0.0 Platform/x86_64-darwin12.5.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Request-Method:
+      - '*'
+      X-Total:
+      - '51'
+      X-Total-Pages:
+      - '51'
+      X-Per-Page:
+      - '1'
+      X-Page:
+      - '1'
+      X-Next-Page:
+      - '2'
+      X-Offset:
+      - '0'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '103'
+      Etag:
+      - '"ce2c790a245ccbcd7290ef1c5627fdd1"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Meta-Request-Version:
+      - 0.3.4
+      X-Request-Id:
+      - bce734c9-ac7f-4f56-895e-10e1269531fe
+      X-Runtime:
+      - '0.067418'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"id":"fac3f133-d62c-4503-9ccb-dd864da9b29b","asset_type":"logo","created_at":"2014-08-13T18:38:32Z"}]'
+    http_version: 
+  recorded_at: Fri, 31 Oct 2014 17:05:22 GMT
+- request:
+    method: get
+    uri: http://PASSWORKS_API_USERNAME:PASSWORKS_API_SECRET@api.passworks.git:3000/v1/assets?page=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Passworks Ruby API Client/0.0.2 Ruby/2.0.0 Platform/x86_64-darwin12.5.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Request-Method:
+      - '*'
+      X-Total:
+      - '51'
+      X-Total-Pages:
+      - '6'
+      X-Per-Page:
+      - '10'
+      X-Page:
+      - '2'
+      X-Next-Page:
+      - '3'
+      X-Prev-Page:
+      - '1'
+      X-Offset:
+      - '0'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1064'
+      Etag:
+      - '"035677900c9d60bd8b49015d543232ee"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Meta-Request-Version:
+      - 0.3.4
+      X-Request-Id:
+      - 1ed1dba4-f3f7-43b5-92bb-e2e760839a65
+      X-Runtime:
+      - '0.076917'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"id":"36280e1d-45ba-4e9f-9100-7e00954fbeff","asset_type":"background","created_at":"2014-10-08T11:45:55Z"},{"id":"94f62792-8e0b-432a-b798-5913808de1e7","asset_type":"background","created_at":"2014-10-08T11:46:13Z"},{"id":"af7204e5-fdad-40ca-a860-80f2e1a2d84f","asset_type":"background","created_at":"2014-10-08T11:48:36Z"},{"id":"c260ced5-0ec6-4c60-a3ea-90dae1c552c6","asset_type":"icon","created_at":"2014-10-08T16:59:10Z"},{"id":"e8e3e21a-a701-499d-9a77-abe554613bfa","asset_type":"logo","created_at":"2014-10-08T16:59:10Z"},{"id":"e34b1054-1d80-4981-8bf8-e106f6b7f780","asset_type":"strip","created_at":"2014-10-08T16:59:10Z"},{"id":"9714f897-3883-4c01-8873-9bcad935f41b","asset_type":"background","created_at":"2014-10-10T11:16:57Z"},{"id":"90aa844b-5613-47ca-93c0-bb8814a0aef0","asset_type":"background","created_at":"2014-10-10T11:23:32Z"},{"id":"49c6fc7c-83cd-44d4-97f3-f9f1b09b8c5b","asset_type":"background","created_at":"2014-10-10T11:24:29Z"},{"id":"3f06225f-2884-4429-9f61-12f6549eb998","asset_type":"background","created_at":"2014-10-10T11:25:32Z"}]'
+    http_version: 
+  recorded_at: Fri, 31 Oct 2014 17:05:22 GMT
+- request:
+    method: get
+    uri: http://PASSWORKS_API_USERNAME:PASSWORKS_API_SECRET@api.passworks.git:3000/v1/assets?page=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Passworks Ruby API Client/0.0.2 Ruby/2.0.0 Platform/x86_64-darwin12.5.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Request-Method:
+      - '*'
+      X-Total:
+      - '51'
+      X-Total-Pages:
+      - '6'
+      X-Per-Page:
+      - '10'
+      X-Page:
+      - '3'
+      X-Next-Page:
+      - '4'
+      X-Prev-Page:
+      - '2'
+      X-Offset:
+      - '0'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1021'
+      Etag:
+      - '"696e24819c50d81bff8a4a320921b9e8"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Meta-Request-Version:
+      - 0.3.4
+      X-Request-Id:
+      - 896fcdc3-1397-4cad-990a-2a25466904d4
+      X-Runtime:
+      - '0.044745'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"id":"8671de50-eecb-440c-8215-87e86cccd9d7","asset_type":"icon","created_at":"2014-10-24T11:29:14Z"},{"id":"cfe3fe3e-2098-44c0-bb84-b35c19394c65","asset_type":"icon","created_at":"2014-10-24T11:30:07Z"},{"id":"16a6236d-5148-4ef1-8393-2a262b10690e","asset_type":"icon","created_at":"2014-10-24T11:44:03Z"},{"id":"5c43d56c-fa96-4e4e-8a72-77ff7f64d2e3","asset_type":"icon","created_at":"2014-10-24T13:31:37Z"},{"id":"ae6c7a4c-e27e-477c-9137-1abe81c996f8","asset_type":"icon","created_at":"2014-10-24T13:32:11Z"},{"id":"23849a88-8456-413d-b6fc-d7a1aa4aaef4","asset_type":"logo","created_at":"2014-10-31T13:12:28Z"},{"id":"3cf16ff4-35bf-45e4-b3f0-96db0492ed63","asset_type":"logo","created_at":"2014-10-31T14:16:39Z"},{"id":"401fda51-347a-40cf-8d4a-c06f9956f152","asset_type":"logo","created_at":"2014-10-31T14:45:55Z"},{"id":"524ca772-2422-4927-bc24-0b36b645b666","asset_type":"logo","created_at":"2014-10-31T14:54:27Z"},{"id":"6796aa3f-e74e-4e81-b786-e1dacb0cd45e","asset_type":"logo","created_at":"2014-10-31T14:55:01Z"}]'
+    http_version: 
+  recorded_at: Fri, 31 Oct 2014 17:05:22 GMT
+- request:
+    method: get
+    uri: http://PASSWORKS_API_USERNAME:PASSWORKS_API_SECRET@api.passworks.git:3000/v1/assets?page=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Passworks Ruby API Client/0.0.2 Ruby/2.0.0 Platform/x86_64-darwin12.5.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Request-Method:
+      - '*'
+      X-Total:
+      - '51'
+      X-Total-Pages:
+      - '6'
+      X-Per-Page:
+      - '10'
+      X-Page:
+      - '4'
+      X-Next-Page:
+      - '5'
+      X-Prev-Page:
+      - '3'
+      X-Offset:
+      - '0'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1021'
+      Etag:
+      - '"a61b5b1bda6af4b1d0e7fdebf51d25bf"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Meta-Request-Version:
+      - 0.3.4
+      X-Request-Id:
+      - cf2250b4-5a89-4768-a269-21ee686c36af
+      X-Runtime:
+      - '0.060556'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"id":"631985e9-22f3-47b2-9bc4-be5efbc3134a","asset_type":"logo","created_at":"2014-10-31T14:56:17Z"},{"id":"b3aafe78-7f03-4175-bdb5-3dd656a3c1e4","asset_type":"logo","created_at":"2014-10-31T14:56:19Z"},{"id":"5c3d7b2a-d99c-4448-ac0e-c230e7b6deff","asset_type":"logo","created_at":"2014-10-31T14:59:51Z"},{"id":"1aad0c84-d028-41dd-9ef1-32e32827ecec","asset_type":"logo","created_at":"2014-10-31T14:59:52Z"},{"id":"d2ba4c2c-cba8-423b-b6a1-9a2cc195f93f","asset_type":"icon","created_at":"2014-10-31T15:30:27Z"},{"id":"46842960-3c68-4c9d-b70b-1bddb1e726a1","asset_type":"icon","created_at":"2014-10-31T15:37:53Z"},{"id":"72745bfd-b4b9-4178-9fb1-9cc589983653","asset_type":"icon","created_at":"2014-10-31T15:37:54Z"},{"id":"c0ab299e-add0-4252-b6ad-d02f198c9bde","asset_type":"icon","created_at":"2014-10-31T15:40:34Z"},{"id":"ee7fcb4b-f503-4eb9-b604-34b433f11f19","asset_type":"icon","created_at":"2014-10-31T16:21:09Z"},{"id":"0bd1c9ff-b82f-4da1-9ec7-b1ef733e9b56","asset_type":"icon","created_at":"2014-10-31T16:21:10Z"}]'
+    http_version: 
+  recorded_at: Fri, 31 Oct 2014 17:05:22 GMT
+- request:
+    method: get
+    uri: http://PASSWORKS_API_USERNAME:PASSWORKS_API_SECRET@api.passworks.git:3000/v1/assets?page=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Passworks Ruby API Client/0.0.2 Ruby/2.0.0 Platform/x86_64-darwin12.5.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Request-Method:
+      - '*'
+      X-Total:
+      - '51'
+      X-Total-Pages:
+      - '6'
+      X-Per-Page:
+      - '10'
+      X-Page:
+      - '5'
+      X-Next-Page:
+      - '6'
+      X-Prev-Page:
+      - '4'
+      X-Offset:
+      - '0'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1021'
+      Etag:
+      - '"df25b5e306bb14013b6932bbd5afec1b"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Meta-Request-Version:
+      - 0.3.4
+      X-Request-Id:
+      - e1bd2f7f-7043-46c4-b1fc-446e51c79a28
+      X-Runtime:
+      - '0.059475'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"id":"85566bda-749b-4584-b58c-78fe1126e009","asset_type":"logo","created_at":"2014-10-31T16:21:12Z"},{"id":"c372f2e7-343d-42e0-ac88-431c204438f8","asset_type":"logo","created_at":"2014-10-31T16:21:12Z"},{"id":"94585561-3698-4db8-ab6e-193ec1787939","asset_type":"icon","created_at":"2014-10-31T16:23:58Z"},{"id":"f61fbd9c-4838-446c-b3e8-ba2901d01cf8","asset_type":"icon","created_at":"2014-10-31T16:24:00Z"},{"id":"bfa92c55-97b3-4881-8cb5-cefc2b5de574","asset_type":"logo","created_at":"2014-10-31T16:24:03Z"},{"id":"75d14314-6d7e-4df0-9d33-b6d0daedb0a4","asset_type":"logo","created_at":"2014-10-31T16:24:04Z"},{"id":"98a983fa-3951-4987-8f63-4c0e94405ede","asset_type":"icon","created_at":"2014-10-31T16:29:25Z"},{"id":"62c0e656-b107-4707-932d-a963b6566301","asset_type":"icon","created_at":"2014-10-31T17:05:15Z"},{"id":"745e8a26-4bdb-453d-86e8-5e3acb1ec804","asset_type":"icon","created_at":"2014-10-31T17:05:17Z"},{"id":"391ad7a1-566b-46e6-acd3-0cec75f9cfd5","asset_type":"icon","created_at":"2014-10-31T17:05:18Z"}]'
+    http_version: 
+  recorded_at: Fri, 31 Oct 2014 17:05:22 GMT
+- request:
+    method: get
+    uri: http://PASSWORKS_API_USERNAME:PASSWORKS_API_SECRET@api.passworks.git:3000/v1/assets?page=6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Passworks Ruby API Client/0.0.2 Ruby/2.0.0 Platform/x86_64-darwin12.5.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Request-Method:
+      - '*'
+      X-Total:
+      - '51'
+      X-Total-Pages:
+      - '6'
+      X-Per-Page:
+      - '10'
+      X-Page:
+      - '6'
+      X-Prev-Page:
+      - '5'
+      X-Offset:
+      - '0'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '103'
+      Etag:
+      - '"a2d89e4550e17a827140999af8e45621"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Meta-Request-Version:
+      - 0.3.4
+      X-Request-Id:
+      - 3b8d8245-8a64-4a26-8360-daea48169851
+      X-Runtime:
+      - '0.057384'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"id":"f3e671f0-213f-4347-bcd2-25019396f605","asset_type":"logo","created_at":"2014-10-31T17:05:22Z"}]'
+    http_version: 
+  recorded_at: Fri, 31 Oct 2014 17:05:23 GMT
+recorded_with: VCR 2.9.3

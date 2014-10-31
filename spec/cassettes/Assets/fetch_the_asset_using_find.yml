@@ -1,0 +1,195 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://PASSWORKS_API_USERNAME:PASSWORKS_API_SECRET@api.passworks.git:3000/v1/assets
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        LS0tLS0tLS0tLS0tLVJ1YnlNdWx0aXBhcnRQb3N0DQpDb250ZW50LURpc3Bv
+        c2l0aW9uOiBmb3JtLWRhdGE7IG5hbWU9ImFzc2V0W2ZpbGVdIjsgZmlsZW5h
+        bWU9ImxvZ28ucG5nIg0KQ29udGVudC1MZW5ndGg6IDQwNjcNCkNvbnRlbnQt
+        VHlwZTogaW1hZ2UvcG5nDQpDb250ZW50LVRyYW5zZmVyLUVuY29kaW5nOiBi
+        aW5hcnkNCg0KiVBORw0KGgoAAAANSUhEUgAAANQAAAA0CAYAAADymhaaAAAP
+        qklEQVR42u2deXTVxRXHDYQ1EEhkk1VFZItUFkGQTQgCLgguiLLZioAKsgjH
+        rSgFNVRUanGpFQVLgSqIIGALVRAQWWQxYBFESlB22QIEQiDS7x/Xc+Z8z503
+        8zuR9/L63h+fk+U3M29+M3Nn7tx7Z94l6fOe8+Vq0BeMA2+CGWAB+BysA1vA
+        TrAHHACHwXFwDBwE+0AW2AY2glVgMZgN3gETwSPgOlAcXBInTrThk6g7WAJO
+        gwth4BzYJMJVItY7KM7/j0CVBu+CCxHkC3B1rHdSnOgXqCJgRoCBny8rS66s
+        ZKeEE+Ck/J4DzoA8cD5A2d+BmrHeUXGiW6D688AWIVgBJoFRYADoCbqAtqAZ
+        SAN1QC1QA1SWnzVBbVAPNAatQLqok/3AUNmbfSxCeIFYCIrEemfFiU6BKgG+
+        oQG9CbQK06CuC+YoQnVzrHdWnOgUqHQayD+BK8NcsWJgGdVjVqx3VpzoFKhx
+        NJAnR6hyHUG+UY+9oGysd1ic6BOoD0ig7ohQ5UqCnbSHuzbWOyxO4UZTtdYb
+        g/gsSItgBT8i4b4l1jssTnQJVBLIMgZwNqgQwQq+TQLVM9Y7LE50CVQ5cNQY
+        wPtAmQhW8DUSqH4B8hYBLUAnkK7QHjQApT3LqwU6g3T5WTvguzQDD4OxwhBx
+        N5QKUMZvwEDwrJQxDHS07C2Lgtagk9DeEtJVXJ51EtpYrLlJoIORrgVIUNIl
+        guvBQ+AZqedI0S5SHe/XCNxE/dRBLMxXgSSPNrqK+snmw2xAn9UFVLKkvYba
+        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
+        jr/UgLzn76nHz93Bnl8bholJnjctpYJsssYlcefTpt524rU02K2k2265sKcF
+        tdW/OE2IA37POwXKfc/IwIAClaCEMB0jp/4Eiz+VKUvX7h3iBHWV8JjiUX8E
+        PrhADbH4GZgxISK5+yorQU3NkkkDcqHxjKOkT4A0D9XjS1BUUWNXezjfEyx+
+        ro9tg4pCmE6GUG8XKwITVKBa0Co310egiAGOW4/SlYCAxko519Oqv5ETVNeu
+        EYv6S1qCC9TbljsFmG4hBmd5kKUEGDcxYumaKYcIR5PfI1O57qyVcWFIGljr
+        GTUx1TPCYoqSbmKAC0lXgkZ0SQtbNL8HSZ4Cxf26lUzflQMKVCVarVkzKAa+
+        4vtV6KKWBoq7aRJ/UAXSxXdG+KLLp/kasTAIFB2xVsyzdJqX1KISvEoRudJ5
+        m8FZ5eh5FS1ahDgv+TeB04p5v04Av9UgW7sTDzi+0Dyb39NxjZhc7uklUMyf
+        KV0vt0C5Jxcyutyk+JryZULbpARYnwQNtMtFjmp3C0SI8b/iRZdnPQWqGq3S
+        u0Ncl1xMOT1aV3XguskGXQJFm+vC2svlKCfSlXT3elx+yfQ2NvsuplgsyfNs
+        e1LHJDPd46JLprN2zswz2pw590ucq6YP7yfzanJUX8UcfIW62XFUmplmmy1p
+        pdpsOV+TJwfgWng4ub8C5y0dupICjDXqkUUxx3LxS3PaGxyjq6ptpIOVlJev
+        Lh6hOEqDrlDlwV6a+FMCrlAlFHU7W2mPbmCNpd3Py361U6hv39hFH3BptH9Z
+        gHCj52Xz1Y1L5Dt7xP9dSZfTXx4iDqydOEfHyn5wMGgS8JsdbwCPgLHCI6CF
+        p+8wkb4YoB0oaqnrjUa6G6h8V7tfBwYZXxYwQhyl5YN8WYDjdGwTSlvG48sC
+        mPpURmdQ2dJuLcHDxhcGDAEtuf04YymwTbs4PkJMiX+dTZxo/8K1jVqEdoR4
+        n3XqWO+wOFEgUMSiQvLt60VBJumrTWK9w+JEn0BN1EJJIkAb2tzuBcmx3mFx
+        Cjc+Vq4jdEozHJQDX7JpNNY7K06UCRQbJugMf6cwxPUVEYvSF8px5bax3llx
+        Cj/2E7j2iy1eBaPAALG6dZHB3gw0BHXEdFwTXAZqyO+1xQ9yLWgF0kF3+ayh
+        Epqy3GLvnxLrHRUnugUqAbwDLniSD84ZZ4ZOCSfASfk9R6yGZ0loXCwD5WK9
+        o+JEB45IA4mZihwzQWqsd1Kc6MH3svmFFIR5MckFn4Iesd45caKPIImvAn3A
+        OPAmmAEWyL7nK4ks3gn2gANiHTwOjoGDYB/IAtvEebwKLAazRb18EQwEDWO9
+        U+JEL/8D4K19cXdPahwAAAAASUVORK5CYIINCi0tLS0tLS0tLS0tLS1SdWJ5
+        TXVsdGlwYXJ0UG9zdA0KQ29udGVudC1EaXNwb3NpdGlvbjogZm9ybS1kYXRh
+        OyBuYW1lPSJhc3NldFthc3NldF90eXBlXSINCg0KbG9nbw0KLS0tLS0tLS0t
+        LS0tLVJ1YnlNdWx0aXBhcnRQb3N0LS0NCg0K
+    headers:
+      User-Agent:
+      - Passworks Ruby API Client/0.0.2 Ruby/2.0.0 Platform/x86_64-darwin12.5.0
+      Content-Type:
+      - multipart/form-data; boundary=-----------RubyMultipartPost
+      Content-Length:
+      - '4392'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Request-Method:
+      - '*'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '101'
+      Etag:
+      - '"459250009e553750008d10c866ba177b"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Meta-Request-Version:
+      - 0.3.4
+      X-Request-Id:
+      - a43079b9-1a32-495d-ac61-fe769f40a7f5
+      X-Runtime:
+      - '0.666737'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":"f3e671f0-213f-4347-bcd2-25019396f605","asset_type":"logo","created_at":"2014-10-31T17:05:22Z"}'
+    http_version: 
+  recorded_at: Fri, 31 Oct 2014 17:05:22 GMT
+- request:
+    method: get
+    uri: http://PASSWORKS_API_USERNAME:PASSWORKS_API_SECRET@api.passworks.git:3000/v1/assets/f3e671f0-213f-4347-bcd2-25019396f605
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Passworks Ruby API Client/0.0.2 Ruby/2.0.0 Platform/x86_64-darwin12.5.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Request-Method:
+      - '*'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '101'
+      Etag:
+      - '"459250009e553750008d10c866ba177b"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Meta-Request-Version:
+      - 0.3.4
+      X-Request-Id:
+      - 3d9a5b4a-0f5a-442b-8b2d-21f70082c195
+      X-Runtime:
+      - '0.045399'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":"f3e671f0-213f-4347-bcd2-25019396f605","asset_type":"logo","created_at":"2014-10-31T17:05:22Z"}'
+    http_version: 
+  recorded_at: Fri, 31 Oct 2014 17:05:22 GMT
+recorded_with: VCR 2.9.3

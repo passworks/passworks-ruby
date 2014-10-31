@@ -8,8 +8,8 @@ require 'passworks/version'
 Gem::Specification.new do |spec|
   spec.name          = "passworks"
   spec.version       = Passworks::VERSION
-  spec.authors       = ["Luis Mendes", "Miguel Verissimo"]
-  spec.email         = ["luis@passworks.io", "miguel@passworks.io"]
+  spec.authors       = ["Luis Mendes", "Miguel Verissimo", "Tiago Parreira"]
+  spec.email         = ["luis@passworks.io", "miguel@passworks.io", "tiago@passworks.io"]
   spec.summary       = %q{Passworks API client}
   spec.description   = %q{Provides a simple interface to Passworks API}
   spec.homepage      = "https://www.passworks.io"

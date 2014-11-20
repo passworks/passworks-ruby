@@ -27,7 +27,7 @@ module Passworks
           yield resource_class.new(client, collection_name, item_data)
         end
         next_page = response.next_page
-        break if next_page.nil?
+        break if next_page == 0
       end
       self
     end

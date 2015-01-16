@@ -3,8 +3,9 @@
 This file is a manually maintained list of changes for each release. Feel free to add your
 changes here when sending pull requests. Also send corrections if you spot any mistakes.
 
-##
+## v0.0.3 (2015-01-16)
 * Bug fix: Missing 'event_tickets' namespace for from client
+* Bug fix: Passworks::Response#ok? now returning correct information
 * Feature: Implemented custom push message in the PassResource#push via :push_message attribute
 ```ruby
 # @pass is a PassResource instance that maps to a pass in the system

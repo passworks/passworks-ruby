@@ -30,11 +30,15 @@ module Passworks
     end
 
     def http_status
-      @response[:status].to_i
+      @response.status
+    end
+
+    def response
+      @response
     end
 
     def ok?
-      (http_status >= 200) && (http_status < 300)
+      @response.success?
     end
 
     def headers

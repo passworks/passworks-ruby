@@ -14,8 +14,9 @@ module Passworks
 
     # Sends a push notification to all clients with this pass installed
     # @return [Boolean] True in case the pass
-    def push
-      client.post("#{collection_name}/#{collection_uuid}/passes/#{id}/push").ok?
+    def push(options={})
+      options = { body: options } unless options.empty?
+      client.post("#{collection_name}/#{collection_uuid}/passes/#{id}/push", options).ok?
     end
 
     # Updates the {PassResource} and returns the updated instance

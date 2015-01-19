@@ -3,6 +3,9 @@
 This file is a manually maintained list of changes for each release. Feel free to add your
 changes here when sending pull requests. Also send corrections if you spot any mistakes.
 
+## v0.0.4 (2015-01-19)
+* Bug fix: Pagination bug regression found when fetching resources with only one page
+
 ## v0.0.3 (2015-01-16)
 * Bug fix: Missing 'event_tickets' namespace for from client
 * Bug fix: Passworks::Response#ok? now returning correct information

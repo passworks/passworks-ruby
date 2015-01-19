@@ -26,7 +26,8 @@ module Passworks
         response.data.each do |item_data|
           yield resource_class.new(client, collection_name, item_data)
         end
-        next_page = response.next_page
+        # Kaminari returns next_page as an empty string if there aren't more pages
+        next_page = response.next_page.to_s.to_i
         break if next_page == 0
       end
       self

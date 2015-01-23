@@ -67,7 +67,7 @@ module Passworks
 
       if collection_name.to_s == 'assets' && collection_uuid.nil?
         raise Passworks::Exceptions::FileNotFound.new("Can't find file #{data[:file]}") unless data.has_key?(:file) && File.exists?(data[:file])
-        data[:file] = ::Faraday::UploadIO.new(data[:file], "image/#{data[:file].split('.').last.downcase}")
+        data[:file] = ::Faraday::UploadIO.new(data[:file], content_type_for(data[:file]))
       end
 
       if collection_uuid
@@ -109,6 +109,17 @@ module Passworks
       else
         collection_name
       end
+    end
+
+    def content_type_for(filename)
+      file_extension = filename.split('.').last.downcase
+      content_types = {
+        "jpg"  => "image/jpeg",
+        "jpeg" => "image/jpeg",
+        "png"  => "image/png",
+        "gif"  => "image/gif",
+      }
+      return content_types[file_extension]
     end
 
   end

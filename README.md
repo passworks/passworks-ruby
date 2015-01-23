@@ -47,6 +47,19 @@ client = Passworks.new({
 
 ## Examples
 
+### Certificates
+
+```ruby
+# Fetch and iterate through all your certificates
+certificates = client.certificates.all
+certificates.each do |certificate|
+  puts certificate
+end
+
+# Fetch a specific certificate via uuid (uuid=c3d5fc64-3a43-4d3a-a167-473dfeb1edd3)
+certificate = client.certificates.find('c3d5fc64-3a43-4d3a-a167-473dfeb1edd3')
+```
+
 ### Assets
 
 ```ruby

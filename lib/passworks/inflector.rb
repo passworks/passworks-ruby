@@ -7,6 +7,8 @@ module Passworks
       case collection_name
       when 'assets'
         'asset'
+      when 'certificates'
+        'certificate'
       when 'boarding_passes'
         'boarding_pass'
       when 'coupons'
@@ -26,7 +28,9 @@ module Passworks
     # If collection_name  return [Passworks::AssetResource]
     # If  collection_uuid == nil return [Passworks::CampaignResource] else return [Passworks::PassResource]
     def resource_class
-      return Passworks::AssetResource if collection_name == 'assets'
+      return Passworks::AssetResource       if collection_name == 'assets'
+      # CertificateResource has no overrides, but follow along the normal flow.
+      return Passworks::CertificateResource if collection_name == 'certificates'
       if collection_uuid
         Passworks::PassResource
       else

@@ -45,7 +45,7 @@ module Passworks
     end
     # @return the endpoint address with API version appended
     def endpoint
-      File.join(@endpoint, 'v1').to_s
+      File.join(@endpoint, 'v2').to_s
     end
 
     class << self

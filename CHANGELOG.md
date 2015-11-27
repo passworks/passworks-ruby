@@ -3,6 +3,9 @@
 This file is a manually maintained list of changes for each release. Feel free to add your
 changes here when sending pull requests. Also send corrections if you spot any mistakes.
 
+## v2.0.0 (2015-11-27)
+* Updated SDK for version 2 of the API
+
 ## v0.0.5 (2015-01-23)
 * Added possibility of listing certificates.
 

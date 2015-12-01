@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["luis@passworks.io", "miguel@passworks.io", "tiago@passworks.io"]
   spec.summary       = %q{Passworks API client}
   spec.description   = %q{Provides a simple interface to Passworks API}
-  spec.homepage      = "https://www.passworks.io"
+  spec.homepage      = "https://passworks.io"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

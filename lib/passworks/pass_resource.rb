@@ -33,7 +33,7 @@ module Passworks
 
     private
       def collection_uuid
-        @collection_uuid ||= send("#{single_name}_id")
+        @collection_uuid ||= campaign_id
       end
 
   end

@@ -3,6 +3,12 @@
 This file is a manually maintained list of changes for each release. Feel free to add your
 changes here when sending pull requests. Also send corrections if you spot any mistakes.
 
+## v2.0.2 (2015-12-01)
+* Fixing collection_uuid on PassResource
+
+## v2.0.1 (2015-11-27)
+* Updated gemspec information
+
 ## v2.0.0 (2015-11-27)
 * Updated SDK for version 2 of the API
 

@@ -320,7 +320,7 @@ updated_generic_pass = generic_pass.update({
 
 ## Documentation
 
-If you want to propagate campaign data changes to it's respective passes, issue a merge call to the campaign object:
+If you want to propagate campaign data changes to it's respective passes, issue a merge POST to the campaign object:
 
 ```
 campaign.merge

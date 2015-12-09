@@ -320,6 +320,14 @@ updated_generic_pass = generic_pass.update({
 
 ## Documentation
 
+If you want to propagate campaign data changes to it's respective passes, issue a merge call to the campaign object:
+
+```
+campaign.merge
+```
+
+## Documentation
+
 For more information about the API please please refere to [https://github.com/passworks/passworks-api](https://github.com/passworks/passworks-api)
 
 For more examples about the Ruby client try browsing the [wiki](https://github.com/passworks/passworks-ruby/wiki)

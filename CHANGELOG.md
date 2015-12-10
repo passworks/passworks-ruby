@@ -3,6 +3,10 @@
 This file is a manually maintained list of changes for each release. Feel free to add your
 changes here when sending pull requests. Also send corrections if you spot any mistakes.
 
+## v2.0.3 (2015-12-09)
+* Added campaign resource's merge call, for propagating campaign pass data changes
+  to all of it's passes.
+
 ## v2.0.2 (2015-12-01)
 * Fixing collection_uuid on PassResource
 

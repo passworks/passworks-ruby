@@ -23,6 +23,13 @@ module Passworks
       client.post("#{collection_name}/#{id}/push").ok?
     end
 
+    # Merges all campaign data changes into the passes using the PassUpdater
+    # /lib/ in the main backend-saas project.
+    # @return [Boolean]
+    def merge
+      client.post("#{collection_name}/#{id}/merge").ok?
+    end
+
     # Updates the {CampaignResource} and returns the updated instance
     # @return [CampaignResource] Updated instance
     def update(data, params={})

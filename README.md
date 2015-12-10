@@ -370,6 +370,10 @@ For that you only need to follow the 2 steps:
 > IMPORTANTE: This method updates all passes `beacons` and `locations` (geo locations) with the Campaign defined ones, overriding the existing in the passes.
 
 
+## Understanding behaviour fields (dynamic vs static content)
+
+
+
 ## Documentation
 
 For more information about the API please please refere to [https://github.com/passworks/passworks-api](https://github.com/passworks/passworks-api)

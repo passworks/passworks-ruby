@@ -338,13 +338,36 @@ updated_generic_pass = generic_pass.update({
 })
 ```
 
-## Documentation
+## Updating campaign passes in a single request
 
-If you want to propagate campaign data changes to it's respective passes, issue a merge POST to the campaign object:
+It's possible to update the passes presentation fields (`primary_fields`, `secondary_fields`, `auxiliary_fields` and `back_fields`) using the Campaign data in a single request.
 
+For that you only need to follow the 2 steps:
+
+1. Update the campaign with the intended information.
+2. Call the `merge` method in the campaign, this method merges the presentation fields of the campaign with the passes information.
+
+```ruby
+	# Find the campaign that you wish to update
+	campaign = client.coupons.find("c3d5fc64-3a43-4d3a-a167-473dfeb1edd3")
+	
+	# Update the campaign
+	campaign.update({
+		secondary_fields: [
+			{
+				key: "date",
+				label: "Promotion expires at",
+				value: "31/12/2015"
+			}
+		]
+	})
+	
+	# Update the campaign passes
+	campaign.merge
 ```
-campaign.merge
-```
+
+> IMPORTANTE: This method updates all passes `beacons` and `locations` (geo locations) with the Campaign defined ones, overriding the existing in the passes.
+
 
 ## Documentation
 

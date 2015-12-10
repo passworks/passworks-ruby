@@ -370,9 +370,20 @@ For that you only need to follow the 2 steps:
 > IMPORTANTE: This method updates all passes `beacons` and `locations` (geo locations) with the Campaign defined ones, overriding the existing in the passes.
 
 
-## Understanding behaviour fields (dynamic vs static content)
+## Understanding behaviour fields (fixed vs dynamic content)
 
+The presentation fields (`primary_fields`, `secondary_fields`, `auxiliary_fields` and `back_fields`) have a new (`behaviour`) attribute. This attribute can have one of two values: `fixed` or `dynamic` _(by default the `behaviour` is set to `fixed`)_.
 
+- fixed
+
+	`fixed` means that the value is `static`: every pass will have the same `label` and `value` for this field.
+	So when you call the  `merge` method in the Ruby client this field will be added or overriden (if the field with the same `key` exists) in every pass even if you had previously customized the value per pass. Don't use the type of field for custom fields in your passes eg: __name__, __client id__, __ticket number__ ,etc. This type of _behaviour_ is a good fit for fields that are the same across all passes eg: `event date`, `event location`, `flight number`, etc.
+
+- dynamic
+
+	The `dynamic` _behaviour_ defines the field as a custom updated field that shouldn't be updated on a bulk update when the `merge` method is called.
+	This field will only be updated when the user updates that field specifically for that pass. This type of _behaviour_ is a good fit for custom fields like `ticket number`, `user name`, `boarding number`, `seat number`, etc..
+	
 
 ## Documentation
 

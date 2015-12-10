@@ -40,14 +40,18 @@ client = Passworks.new
 ```ruby
 # Instance level configuration
 client = Passworks.new({
-	api_username: 'your api username',
-	api_secret: 'your api secret'
+  api_username: 'your api username',
+  api_secret: 'your api secret'
 })
 ```
 
 ## Examples
 
 ### Certificates
+
+Certificates are an essential part of every campaign.
+
+They're used to uniquely identify a certain person or organization, and offer authenthicity reasurance. [See Passworks API](https://github.com/passworks/passworks-api/blob/master/v2/sections/certificates.md#certificates) for mode information.
 
 ```ruby
 # Fetch and iterate through all your certificates
@@ -61,6 +65,10 @@ certificate = client.certificates.find('c3d5fc64-3a43-4d3a-a167-473dfeb1edd3')
 ```
 
 ### Assets
+
+Assets are the visual elements of the pass.
+
+You can reuse assets, meaning that you can assign the same asset to multiple passes, reducing the number of asset operations and also reducing the amount of bandwidth required to create a pass. [See Passworks API](https://github.com/passworks/passworks-api/blob/master/v2/sections/assets.md#assets) for mode information.
 
 ```ruby
 # Upload an asset (icon image)
@@ -83,6 +91,8 @@ asset.delete
 ```
 
 ### Coupons
+
+Coupons can be used to offer customers a discount or promotion, or as a general proximity marketing asset. [See Passworks API](https://github.com/passworks/passworks-api/blob/master/v2/sections/coupon.md) for mode information.
 
 ```ruby
 # Create a coupon campaign
@@ -131,6 +141,9 @@ updated_coupon_pass = coupon_pass.update({
 
 ### Store Cards
 
+The Passworks API can be used to create loyalty or event tier programs to reward your customers for using your services. [See Passworks API](https://github.com/passworks/passworks-api/blob/master/v2/sections/store_card.md) for mode information.
+
+
 ```ruby
 # Create a store card campaign
 coupon_campaign = client.store_cards.create({
@@ -177,6 +190,8 @@ updated_coupon_pass = store_card_pass.update({
 ```
 
 ### Event Tickets
+
+Event Tickets are passes used for events such as concerts, movie tickets, galas, meetings or other types of activity that happen in a specific time or day. [See Passworks API](https://github.com/passworks/passworks-api/blob/master/v2/sections/event_ticket.md) for mode information.
 
 ```ruby
 # Create a event ticket campaign
@@ -225,6 +240,9 @@ updated_event_ticket_pass = event_ticket_pass.update({
 
 ### Bording Passes
 
+Boarding passes can be airplane, bus, train, or boat tickets. You also can create generic boarding passes. [See Passworks API](https://github.com/passworks/passworks-api/blob/master/v2/sections/boarding_pass.md) for mode information.
+
+
 ```ruby
 # Create a boarding pass campaign
 boarding_pass_campaign = client.boarding_passes.create({
@@ -272,6 +290,8 @@ updated_boarding_pass_pass = boarding_pass_pass.update({
 ```
 
 ### Generic
+
+Generic passes can be used for anything that doesn't fit in the other pass categories. [See Passworks API](https://github.com/passworks/passworks-api/blob/master/v2/sections/generic.md) for mode information.
 
 ```ruby
 # Create a generic pass campaign

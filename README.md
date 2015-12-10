@@ -366,6 +366,7 @@ For that you only need to follow the 2 steps:
 	campaign.merge
 ```
 
+
 > IMPORTANTE: This method updates all passes `beacons` and `locations` (geo locations) with the Campaign defined ones, overriding the existing in the passes.
 
 

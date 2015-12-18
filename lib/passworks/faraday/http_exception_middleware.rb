@@ -47,7 +47,7 @@ module Passworks
 
       private
         def error_400(response)
-          "#{response[:method].to_s.upcase} #{response[:url].to_s}: #{response[:status]} - #{error_body(response)}"
+          "#{response[:method].to_s.upcase} #{response[:url].to_s}: #{response[:status]}\n#{error_body(response)}"
         end
 
         def error_500(response, short_description, long_description)
@@ -63,8 +63,8 @@ module Passworks
 
           if body.nil?
             nil
-          elsif body['message']
-            "(#{body['error_code']}) #{body['message']}"
+          elsif body['errors']
+            body['errors'].collect{ |k,v| "#{k}: #{v.join(',')}" }.join("\n")
           end
         end
 

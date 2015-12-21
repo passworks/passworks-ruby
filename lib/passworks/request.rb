@@ -25,7 +25,6 @@ module Passworks
         connection.adapter ::Faraday.default_adapter
       end
       @agent.headers[:user_agent]    = @user_agent
-      @agent.headers['Content-Type'] = 'application/json'
       @agent
     end
 

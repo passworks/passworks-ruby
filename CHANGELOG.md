@@ -3,6 +3,9 @@
 This file is a manually maintained list of changes for each release. Feel free to add your
 changes here when sending pull requests. Also send corrections if you spot any mistakes.
 
+## v2.0.6 (2015-12-22)
+* Fixed JSON errors when displaying attributes with a single error (non-array-format).
+
 ## v2.0.5 (2015-12-21)
 * Fixed file upload issue cause by sending the wrong content-type.
 

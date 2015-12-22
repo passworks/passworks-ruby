@@ -64,7 +64,10 @@ module Passworks
           if body.nil?
             nil
           elsif body['errors']
-            body['errors'].collect{ |k,v| "#{k}: #{v.join(',')}" }.join("\n")
+            body['errors'].collect{ |k,v|
+              errors = v.is_a?(String) ? v : v.join(',')
+              "#{k}: #{errors}"
+            }.join("\n")
           end
         end
 

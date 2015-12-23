@@ -6,6 +6,7 @@ module Passworks
     def delete
       client.delete("#{collection_name}/#{id}").ok?
     end
+    alias_method :destroy, :delete
 
   end
 end

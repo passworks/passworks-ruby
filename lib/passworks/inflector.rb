@@ -9,6 +9,8 @@ module Passworks
         'asset'
       when 'certificates'
         'certificate'
+      when 'templates'
+        'template'
       when 'boarding_passes'
         'boarding_pass'
       when 'coupons'
@@ -31,10 +33,13 @@ module Passworks
       return Passworks::AssetResource       if collection_name == 'assets'
       # CertificateResource has no overrides, but follow along the normal flow.
       return Passworks::CertificateResource if collection_name == 'certificates'
+      return Passworks::TemplateResource if collection_name == 'templates'
       if collection_uuid
         Passworks::PassResource
-      else
+      elsif ['boarding_passes', 'coupons', 'store_cards', 'event_tickets', 'generics'].include?(collection_name)
         Passworks::CampaignResource
+      else
+        raise 'Invalid Resource Class'
       end
     end
 

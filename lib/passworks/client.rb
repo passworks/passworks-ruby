@@ -35,7 +35,7 @@ module Passworks
     # @!method generics
     #   Allows to to access the Generic API
     #   @return [Passworks::RequestProxy]
-    %w(certificates assets boarding_passes store_cards coupons event_tickets generics).each do |collection_name|
+    %w(certificates assets templates boarding_passes store_cards coupons event_tickets generics).each do |collection_name|
       define_method(collection_name) do
         Passworks::RequestProxy.new(self, collection_name, nil)
       end

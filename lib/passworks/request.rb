@@ -4,9 +4,9 @@ module Passworks
     def request(method, path, options={})
       response = agent.send(method) do |request|
         case method
-        when :get, :delete
+        when :get
           request.url(path, options[:query])
-        when :post, :put, :patch
+        when :post, :put, :patch, :delete
           request.path = path
           request.body = options.fetch(:body, {})
         end

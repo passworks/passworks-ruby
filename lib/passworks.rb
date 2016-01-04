@@ -17,6 +17,7 @@ require 'passworks/resource'
 require 'passworks/campaign_resource'
 require 'passworks/asset_resource'
 require 'passworks/certificate_resource'
+require 'passworks/template_resource'
 require 'passworks/pass_resource'
 
 # Passworks

@@ -14,7 +14,7 @@ module Passworks
     # @return [String] Collection UUID
     attr_reader :collection_uuid
 
-    def initialize(client, collection_name, collection_uuid=nil, options={})
+    def initialize(client, collection_name, collection_uuid = nil, options = {})
       @collection_name = collection_name
       @collection_uuid = collection_uuid
       @client          = client
@@ -30,7 +30,7 @@ module Passworks
     # @example Fetching the very first coupon pass from the first coupon (campaign) without having to pull all the elements first from the server
     #   client.coupons.all(per_page: 1).first.passes.all(per_page: 1).first
     # @return [Passworks::CollectionProxy]
-    def all(options={})
+    def all(options = {})
       options = { query: options } unless options.empty?
       CollectionProxy.new(client, collection_name, collection_uuid, options)
     end
@@ -44,6 +44,8 @@ module Passworks
     #   pass = client.coupons.all(per_page: 1).first.passes.find('c3d5fc64-3a43-4d3a-a167-473dfeb1edd3')
     # @return [PassResource.new or CampaignResource]
     def find(uuid)
+      # TODO @tparreira add a validation for UUID.
+      raise Passworks::Exceptions::InvalidUUID.new("The UUID supplied is invalid.") if uuid.empty?
       if collection_uuid
         fetch_url = "#{collection_name}/#{collection_uuid}/passes/#{uuid}"
       else

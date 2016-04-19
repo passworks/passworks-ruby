@@ -18,8 +18,8 @@ module Passworks
       @agent ||= ::Faraday.new(endpoint) do |connection|
         connection.basic_auth(@api_username, @api_secret)
         connection.request :multipart
-        connection.request :json if self.debug
-        connection.response :logger
+        connection.request :json
+        connection.response :logger if self.debug
         connection.response :json, :content_type => /\bjson$/
         connection.use Passworks::Faraday::HttpExceptionMiddleware
         connection.adapter ::Faraday.default_adapter

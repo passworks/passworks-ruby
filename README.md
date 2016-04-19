@@ -64,6 +64,26 @@ end
 certificate = client.certificates.find('c3d5fc64-3a43-4d3a-a167-473dfeb1edd3')
 ```
 
+
+### Templates
+
+A template is made up of several assets (icon being the only required one), and multiple customization options, such as colors.
+
+You can find a template by it's ID:
+
+```ruby
+# Fetch a specific template via uuid (uuid=c3d5fc64-3a43-4d3a-a167-473dfeb1edd3)
+template = template.find('c3d5fc64-3a43-4d3a-a167-473dfeb1edd3')
+
+# Delete template without deleting its associated assets
+asset.delete(false)
+
+# Delete template, and its associated assets
+asset.delete(true)
+```
+
+Beware: in case you try to delete the assets, note that they will only be deleted, in case ALL of them were exclusive to this template, in which case ALL will be deleted. If just one of them was shared with some other template, none will be deleted.
+
 ### Assets
 
 Assets are the visual elements of the pass.

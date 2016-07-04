@@ -3,6 +3,10 @@
 This file is a manually maintained list of changes for each release. Feel free to add your
 changes here when sending pull requests. Also send corrections if you spot any mistakes.
 
+## v2.1.0 (2016-06-30)
+* Features:
+  - Added methods to retrieve campaign reports
+
 ## v2.0.7 (2016-01-05)
 * Now able to delete assets and templates.
 

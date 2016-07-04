@@ -11,6 +11,16 @@ module Passworks
       Passworks::RequestProxy.new(client, collection_name, id, options)
     end
 
+    def daily_report(options={})
+      options = options.select {|k,v| ['start_date', 'end_date'].include?(k.to_s) }
+      options = options.collect{|k,v| "#{k}=#{v}"}.join('&')
+      client.get("#{collection_name}/#{id}/reports?#{options}").data
+    end
+
+    def total_report
+      client.get("#{collection_name}/#{id}/reports/totals").data
+    end
+
     # Deletes the current Campaign
     # @return [Boolean]
     def delete
@@ -41,7 +51,5 @@ module Passworks
       response  = client.patch("#{collection_name}/#{id}", content)
       self.class.new(client, collection_name, response.data)
     end
-
-
   end
 end

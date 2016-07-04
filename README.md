@@ -403,7 +403,100 @@ The presentation fields (`primary_fields`, `secondary_fields`, `auxiliary_fields
 
 	The `dynamic` _behaviour_ defines the field as a custom updated field that shouldn't be updated on a bulk update when the `merge` method is called.
 	This field will only be updated when the user updates that field specifically for that pass. This type of _behaviour_ is a good fit for custom fields like `ticket number`, `user name`, `boarding number`, `seat number`, etc..
-	
+
+## Reports
+
+The [API](https://github.com/passworks/passworks-api) provides two kinds of reports regarding the campaigns, a detailed day by day report or a totalization of passes issued.
+
+The endpoints are the same for any kind of campaign (coupons, event tickets, boarding passes, etc) and are very easy to use:
+
+```ruby
+# Find the campaign that you wish get the report
+# Remember that it can be used for any kind of campaign
+
+campaign = client.coupons.find("c3d5fc64-3a43-4d3a-a167-473dfeb1edd3")
+
+# The period is optional, when not provided, a month before the current
+# date is going to be assumed.
+
+report_period = {
+   start_date: '2010-10-10',
+   end_date: '2016-06-30
+}
+daily_report = campaign.daily_report(report_period)
+
+# You can also find a totalization (no arguments received)
+total_report = campaign.total_report
+
+```
+
+### Output
+
+#### Daily
+```ruby
+daily_report = campaign.daily_report(report_period)
+{  
+  "campaign_id" => "54612b54-71b8-490e-a5a8-600fc497227d",
+  "start_date" => "2016-06-01T14:51:15.248 Z",
+  "end_date" => "2016-07-01",
+  "report" => {  
+    "2016-06-30" => { 
+      "installs_count" => 0,
+      "uninstalls_count" => 0,
+      "redeems_count" => 0,
+      "fetches_count" => 0,
+      "downloads_count" => 1,
+      "views_count" => 0,
+      "creates_count" => 1,
+      "expires_count" => 0,
+      "pushes_count" => 0,
+      "updates_count" => 0,
+      "webhooks_count" => 0,
+      "api_calls_count" => 0,
+      "distribution_updates_count" => 0,
+      "i" => {  
+        "ios" => 0,
+        "android" => 0,
+        "wp" => 0
+      },
+      "u" => {  
+        "ios" => 0,
+        "android" => 0,
+        "wp" => 0
+      },
+      "active_count" => 0,
+      "removed_count" => 0
+    }
+  }
+}
+```
+
+
+#### Totals
+```ruby
+total_report = campaign.total_report
+{
+  "campaign_id" => "54612b54-71b8-490e-a5a8-600fc497227d",
+  "report" => {
+    "installs_count" => 0,
+    "uninstalls_count" => 0,
+    "redeems_count" => 0,
+    "fetches_count" => 0,
+    "downloads_count" => 2,
+    "views_count" => 0,
+    "creates_count" => 2,
+    "expires_count" => 0,
+    "pushes_count" => 0,
+    "updates_count" => 0,
+    "webhooks_count" => 0,
+    "api_calls_count" => 0,
+    "distribution_updates_count" => 0,
+    "active_count" => 0,
+    "removed_count" => 0
+  }
+}
+```
+
 
 ## Documentation
 

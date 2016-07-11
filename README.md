@@ -370,7 +370,7 @@ For that you only need to follow the 2 steps:
 ```ruby
 	# Find the campaign that you wish to update
 	campaign = client.coupons.find("c3d5fc64-3a43-4d3a-a167-473dfeb1edd3")
-	
+
 	# Update the campaign
 	campaign.update({
 		secondary_fields: [
@@ -381,7 +381,7 @@ For that you only need to follow the 2 steps:
 			}
 		]
 	})
-	
+
 	# Update the campaign passes
 	campaign.merge
 ```
@@ -435,12 +435,12 @@ total_report = campaign.total_report
 #### Daily
 ```ruby
 daily_report = campaign.daily_report(report_period)
-{  
+{
   "campaign_id" => "54612b54-71b8-490e-a5a8-600fc497227d",
   "start_date" => "2016-06-01T14:51:15.248 Z",
   "end_date" => "2016-07-01",
-  "report" => {  
-    "2016-06-30" => { 
+  "report" => {
+    "2016-06-30" => {
       "installs_count" => 0,
       "uninstalls_count" => 0,
       "redeems_count" => 0,
@@ -454,12 +454,12 @@ daily_report = campaign.daily_report(report_period)
       "webhooks_count" => 0,
       "api_calls_count" => 0,
       "distribution_updates_count" => 0,
-      "i" => {  
+      "i" => {
         "ios" => 0,
         "android" => 0,
         "wp" => 0
       },
-      "u" => {  
+      "u" => {
         "ios" => 0,
         "android" => 0,
         "wp" => 0
@@ -478,6 +478,8 @@ total_report = campaign.total_report
 {
   "campaign_id" => "54612b54-71b8-490e-a5a8-600fc497227d",
   "report" => {
+    "apple" => { "installs_count" => 0, "uninstalls_count" => 0 },
+    "android" => { "installs_count" => 0, "uninstalls_count" => 0 }
     "installs_count" => 0,
     "uninstalls_count" => 0,
     "redeems_count" => 0,
